@@ -1,0 +1,120 @@
+.printing
+	background-color #f8f8f8
+	padding-top 70px
+	
+	&__title
+		margin-bottom 20px
+	
+	&__inner
+		max-width 1130px
+		margin 0 auto
+		width 100%
+		text-align center
+		
+	&__text
+		max-width 768px
+		width 100%
+		margin 0 auto 70px
+		color #444444
+		font-size 18px
+		line-height 24px
+		letter-spacing 0.36px
+		
+	&__items
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-wrap wrap
+		margin-left -45px
+		
+	&__elem
+		flex 0 0 50%
+		width 50%
+		padding 0 0 38px 45px
+		box-sizing border-box
+		
+	&__item
+		box-shadow: -15px 15px 0 0 #7fd1d2, 5px 5px 20px 0 rgba(0,0,0,.1)
+		height 100%
+		text-decoration none
+		display block
+		transition box-shadow ease-out .3s
+		
+		&:hover
+			box-shadow: -15px 15px 0 0 #74bfc0, 5px 5px 20px 0 rgba(0,0,0,.2)
+			
+			.printing__item-label
+				background-color #74bfc0
+			
+		
+	&__item-img
+		font-size: 0
+		line-height 0
+		position relative
+		display block
+		
+		img
+			max-width 542px
+			width 100%
+			max-height 248px
+			height 100%
+		
+	&__item-content
+		padding 30px 15px 28px
+		box-sizing border-box
+		color #444444
+		font-size 18px
+		letter-spacing 0.33px
+		display block
+		
+	&__item-title
+		margin-bottom 20px
+		line-height 26.16px
+		
+	&__item-text
+		line-height 24px
+
+	&__item-label
+		position absolute
+		bottom -24px
+		left 0
+		color #ffffff
+		font-size 26px
+		line-height 26.16px
+		letter-spacing 0.48px
+		background-color #7fd1d2
+		padding 14px 24px
+		box-sizing border-box
+		
+@media all and (max-width: 1180px)
+	.printing
+		&__inner
+			padding 0 20px
+			box-sizing border-box
+			
+		&__items
+			margin-left -20px
+			
+		&__elem
+			padding: 0 0 20px 20px
+			
+@media all and (max-width: 768px)
+	.printing
+		
+		&__item-label
+			padding 8px 18px
+			font-size 24px
+			
+@media all and (max-width: 542px)
+	.printing
+		&__elem
+			flex 0 0 100%
+			width 100%
+			
+@media all and (max-width: 480px)
+	.printing
+		
+		&__item-content,&__text
+			font-size 16px

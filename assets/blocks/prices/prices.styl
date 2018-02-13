@@ -1,0 +1,157 @@
+.prices
+	background-color: #fff
+	padding 70px 0
+	
+	&__inner
+		max-width 884px
+		margin 0 auto
+		width 100%
+		text-align center
+		
+	&__title
+		margin-bottom 20px
+		
+	&__text
+		color #444444
+		font-size 18px
+		line-height 24px
+		letter-spacing 0.36px
+		margin-bottom 70px
+		
+	&__table-wrap
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content flex-end
+		
+	&__adaptive-table
+		flex 0 0 962px
+		width 962px
+		padding 5px 0 50px 0
+		box-sizing border-box
+		
+	&__table
+		td
+			border 1px solid #d9d9d9
+			text-align center
+			color #444444
+			font-size 18px
+			font-weight 400
+			line-height 24px
+			letter-spacing 0.34px
+			padding 7px 10px
+			
+		thead
+			tr
+				td
+					padding 25px 50px
+					white-space nowrap
+					
+					&:first-child
+						border-top-color transparent
+						border-left-color transparent
+						
+					&:nth-child(2)
+						border-right-color #7fd1d2
+						
+					&:nth-child(3)
+						position relative
+						border-top-color transparent
+						border-left-color transparent
+						border-right-color #7fd1d2
+						
+						&:before
+							content ""
+							position absolute
+							top -5px
+							left -1px
+							right -1px
+							height 5px
+							border-top 1px solid #7fd1d2
+							border-left 1px solid #7fd1d2
+							border-right 1px solid #7fd1d2
+							
+					&:last-child
+						padding-left 20px
+						padding-right 20px
+							
+		tbody
+			tr
+				&:last-child
+					td
+						&:nth-child(3)
+							position relative
+				td
+					&:nth-child(2),&:nth-child(3)
+						border-right 1px solid #7fd1d2
+						
+					&:first-child
+						border-left none
+						
+	&__choose-button
+		position absolute
+		top 100%
+		left -1px
+		right -1px
+		display block
+		background-color: #7fd1d2
+		color #ffffff
+		font-size 17px
+		font-weight 400
+		line-height 25.79px
+		letter-spacing 0.32px
+		text-transform uppercase
+		text-decoration none
+		padding: 9px 10px 8px
+		
+
+@media all and (max-width: 1080px)
+	.prices
+		
+		&__inner
+			max-width 980px
+			
+		&__adaptive-table
+			flex 1 1 auto
+			width auto
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			
+@media all and (max-width: 980px)
+	.prices
+		
+		&__inner
+			padding 0 20px
+			box-sizing border-box
+		
+		&__adaptive-table
+			overflow-x auto
+			display block
+			margin-right -20px
+			
+			&::-webkit-scrollbar
+				height 7px
+				
+			&::-webkit-scrollbar-thumb
+				border-radius: 0
+				background-color: #7fd1d2
+				
+			&::-webkit-scrollbar-track
+				background-color transparent
+				
+			
+			table
+				min-width 962px
+				margin-bottom 0
+				
+@media all and (max-width: 480px)
+	.prices
+		
+		&__text
+			font-size 15px

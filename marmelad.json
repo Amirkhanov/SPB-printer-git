@@ -1,0 +1,79 @@
+{
+    "app": {
+        "browserSync": {
+            "server": {
+                "baseDir": "dist"
+            },
+            "port": 5200,
+            "open": false,
+            "directory": true,
+            "ghostMode": false,
+            "notify": true
+        },
+        "beml": {
+            "elemPrefix": "__",
+            "modPrefix": "--",
+            "modDlmtr": "-"
+        },
+        "jsPrettify": {
+            "indent_size": 4,
+            "indent_char": " ",
+            "eol": "\n",
+            "collapseWhitespace": true
+        },
+        "autoprefixer": {
+            "browsers": [
+                "last 2 version",
+                "ie >= 9",
+                "Android 2.3",
+                "Android >= 4",
+                "Chrome >= 20",
+                "Firefox >= 24",
+                "Explorer >= 8",
+                "iOS >= 6",
+                "Opera >= 12",
+                "Safari >= 6"
+            ]
+        }
+    },
+    "base": {
+        "assets": "assets",
+        "dist": "dist",
+        "storage": "/images",
+        "pages": "/pages",
+        "blocks": "/blocks",
+        "plugins": "/plugins",
+        "styles": "/styles",
+        "scripts": "/scripts",
+        "svg": "/svg"
+    },
+    "paths": {
+        "assets": "assets",
+        "dist": "dist",
+        "storage": "dist/images",
+        "pages": "assets/pages",
+        "blocks": "assets/blocks",
+        "plugins": "assets/plugins",
+        "styles": "assets/styles",
+        "images": {
+            "src": "assets/images",
+            "dest": "dist/images/img"
+        },
+        "font": {
+            "src": "assets/font",
+            "dest": "dist/images/font"
+        },
+        "files": {
+            "src": "assets/files",
+            "dest": "dist/images/files"
+        },
+        "scripts": {
+            "vendor": "assets/scripts/vendor",
+            "main": "assets/scripts"
+        },
+        "svg": "assets/svg"
+    },
+    "version": "1.2.5",
+    "name": "marmelad",
+    "description": "Сборщик статичных сайтов на базе Gulp"
+}

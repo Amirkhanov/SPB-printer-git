@@ -1,0 +1,286 @@
+.app-header
+	
+	&--fixed
+		position: fixed
+		top: 0
+		left: 0			
+		right: 0
+		width: 100%
+		height: 100px
+		z-index: 10
+		background-color: #fff	
+	
+	&__topline
+		box-sizing border-box
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items center
+		border-bottom 1px solid #eceff1
+		padding 6px 110px
+		box-sizing border-box
+		
+	&__topline-item
+		
+		&--phone
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			
+	&__phone
+		color: #444
+		font-size 13px
+		font-weight 300
+		text-decoration none
+		letter-spacing 1.02px
+		
+		&:hover
+			color: #444
+		
+	&__schedule
+		color: #444
+		font-size 13px
+		font-weight 300
+		letter-spacing 1.02px
+		line-height 1.6
+		margin-left 5px
+			
+	&__buttons
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		
+	&__button
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		
+		&--reg
+			margin-right 20px
+			position relative
+			
+			&:hover
+				&:before
+					content ""
+					position absolute
+					top 100%
+					left 0
+					right 0
+					height 28px
+					
+				.app-header__button-dropdown
+					display block
+			
+		&--cart
+			text-decoration none
+		
+	&__button-icon
+		margin-right 10px
+		flex 0 0 16px
+		width 16px
+		font-size: 0
+		line-height 0
+		
+		img
+			max-width 100%
+			
+	&__button-text
+		color #444444
+		font-size 13px
+		font-weight 300
+		letter-spacing 1.02px
+		
+		a
+			color #444444
+			text-decoration none
+					
+	&__button-dropdown
+		display none
+		position absolute
+		top calc(100% + 28px)
+		border-radius 10px
+		background-color #ffffff
+		border 1px solid #dedede
+		box-sizing border-box
+		padding 20px
+		box-shadow 0 0 24px rgba(0, 0, 0, 0.19)
+		z-index: 1		
+		
+		&:before
+			content ""
+			position absolute
+			bottom 100%
+			right 28px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 14px 13px 14px;
+			border-color: transparent transparent #dedede transparent;
+			
+		&:after
+			content ""
+			position absolute
+			bottom 100%
+			right 33px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 9px 12px 9px;
+			border-color: transparent transparent #fff transparent;
+		
+	&__button-dropdown-links
+		a
+			display block
+			color #444444
+			font-family com
+			font-size 14px
+			font-weight 300
+			letter-spacing 1.12px
+			text-decoration none
+			margin-bottom 10px
+			
+			&:last-child
+				margin-bottom 0
+				
+	&__bottomline {}
+
+	&__menu
+		& > ul
+			list-style-type none
+			padding 0
+			margin 0
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			align-items center
+			
+			& > li
+				margin-right 92px
+				position relative
+				
+				&:hover
+					& > .app-header__menu-dropdown
+						display -webkit-flex
+						display -moz-flex
+						display -ms-flex
+						display -o-flex
+						display flex
+						
+					&:before
+						content ""
+						position absolute
+						top 90%
+						left 0
+						right 0
+						height 20px
+						
+				&:last-child
+					margin-right 0
+				& > a
+					padding 15px 0 18px
+					box-sizing border-box
+					color #444444
+					font-family com
+					font-size 14px
+					font-weight 300
+					text-transform uppercase
+					letter-spacing 1.12px
+					text-decoration none
+					display block
+					
+	&__menu-dropdown
+		display none
+		position absolute
+		top calc(100% + 12px)
+		left 50%
+		transform translateX(-50%)
+		width 420px
+		border-radius 10px
+		background-color #ffffff
+		box-shadow 0 0 24px rgba(0, 0, 0, 0.19)
+		padding 15px
+		box-sizing border-box
+		z-index: 1
+		
+		&:before
+			position absolute
+			bottom 100%
+			left 50%
+			transform translateX(-50%)
+			content ""
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 12px 12px 12px;
+			border-color: transparent transparent #fff transparent;
+			
+		& > ul
+			list-style-type none
+			padding 0
+			margin 0
+			
+			li
+				
+				a
+					color #444444
+					font-family com
+					font-size 13px
+					font-weight 300
+					text-transform uppercase
+					letter-spacing 1.02px
+					text-decoration none
+			
+	&__menu-dropdown-img
+		flex 0 0 182px
+		width 182px
+		margin-right 25px
+		font-size: 0
+		line-height 0
+		
+		img
+			width 100%
+			
+@media all and (max-width: 1024px)
+	.app-header
+		&__topline
+			border-bottom none
+		
+		&__bottomline
+			display none
+		
+@media all and (max-width: 980px)
+	.app-header
+		&__topline
+			flex-direction column
+			padding: 6px 10px
+		
+		&__topline-item
+			&--logo
+				order -1
+				
+			&--phone
+				margin-bottom 5px
+
+@media all and (max-width: 480px)
+	.app-header
+		&__phone-icon
+			display none
+			
+		&__phone,&__schedule
+			font-size: 9px
+			font-weight 700
+			letter-spacing: 0.72px;
+			

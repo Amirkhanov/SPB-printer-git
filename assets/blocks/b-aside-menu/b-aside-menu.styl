@@ -1,0 +1,206 @@
+.b-aside-menu-btn
+	padding 10px
+	box-sizing border-box
+	cursor pointer
+	position fixed
+	top 0
+	left 0
+	display none
+	z-index 100
+	background-color: #fff
+	
+	.svg-icon
+		width 25px
+		height 25px
+		fill #7fd1d2
+		display block
+
+
+.b-aside-menu
+	position fixed
+	z-index 1000
+	top 0
+	width 100%
+	height 100%
+	right 110%
+
+	&.js-opening
+		right 0
+
+	&.js-animate
+		.b-aside-menu__overlay
+			opacity 1
+
+		.b-aside-menu__content
+			transform translateX(0)
+
+	&__content
+		position: absolute;
+		z-index: 25;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-width: 340px;
+		height: 100%;
+		background-color: #fff;
+		box-shadow: 5px 10px 15px 5px rgba(0,0,0,0.1);
+		box-sizing: border-box;
+		transform: translateX(-100%);
+		transition: transform 0.15s linear;
+
+	&__close
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 150;
+		padding: 10px;
+		cursor: pointer;
+		background-color: #fff;
+		border-radius: 0 0 0 16px;
+		box-shadow: 0 0 20px rgba(0,0,0,0.3);
+		
+		.svg-icon
+			fill #7fd1d2
+
+	&__navs
+		height 100%
+
+	&__scroller
+		width 100%
+		height 100%
+		overflow-y scroll
+		-webkit-overflow-scrolling touch
+		padding 0 0 35px 0
+		box-sizing border-box
+
+		&::-webkit-scrollbar
+			width 4px
+
+		&::-webkit-scrollbar-thumb
+			border-radius 0
+			background-color #7fd1d2
+
+		&::-webkit-scrollbar-track
+			border-radius 0
+			background-color transparent
+
+	&__scroller-content
+		position relative
+		z-index 75
+
+	&__foot
+		position relative
+
+	&__overlay
+		position: absolute;
+		z-index: 15;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(255,255,255,0.7);
+		opacity: 0;
+		transition: opacity 0.15s linear;
+
+.aside-nav-list
+	margin 10px 0 0 0
+	padding 10px 0 0 0
+	list-style-type none
+	background-color #fff
+
+	&.aside-nav-list__app-header-menu
+		ul
+			padding-left 0
+
+	li
+		position: relative;
+		overflow: hidden;
+		padding-left: 0;
+		margin-top: 0;
+
+		& > ul
+			position: relative;
+			z-index: 25;
+			margin: 0;
+			padding: 10px 0;
+			list-style-type: none;
+			display: none;
+			
+			li
+				a
+					font-size 11px
+
+		&.opened.is-has-child
+			& > ul
+				display block
+				box-shadow: inset 0 -20px 18px -28px rgba(51,51,51,0.7);
+				
+			& > a
+				color: #fff;
+				background-color: #7fd1d2;
+				-webkit-box-shadow: 0 6px 12px -9px rgba(51, 51, 51, 0.7);
+				box-shadow: 0 6px 12px -9px rgba(51, 51, 51, 0.7);
+				
+			& > .sub-menu-trigger
+			    transform: rotate(180deg);
+			    
+			    .svg-icon
+			    	fill #fff
+
+		a
+			position: relative;
+			z-index: 35;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+			transition: background-color 0.3s linear;
+			background: #fff;
+			padding 16px 10px
+			box-sizing border-box
+			display block
+			font-family: com
+			font-weight 300
+			color: #444
+			font-size 14px
+			text-decoration none
+			text-transform uppercase
+			
+	&__app-header-menu
+		margin-top 40px
+		
+		/*& > ul
+			& > li
+				& > a
+					padding 10px
+					box-sizing border-box
+					display block*/
+
+.sub-menu-trigger
+	position: absolute;
+	z-index: 35;
+	width: 46px;
+	height: 46px;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transform-origin: center center;
+	-ms-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	transition: -webkit-transform 0.3s linear;
+	-webkit-transition: -webkit-transform 0.3s linear;
+	-o-transition: -o-transform 0.3s linear;
+	transition: transform 0.3s linear;
+	transition: transform 0.3s linear, -webkit-transform 0.3s linear, -o-transform 0.3s linear;
+	transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+	
+	.svg-icon
+		fill #7fd1d2
+
+@media all and (max-width: 1024px)
+	.b-aside-menu-btn
+		display block

@@ -1,0 +1,71 @@
+<header block="app-header" mod="{{mod}}">
+    <div elem="topline">
+		<div elem="topline-item" mod="phone">
+			<a href="tel:+7(812)648-82-40" elem="phone">
+				<span elem="phone-icon"><img src="images/img/phone-icon.png" alt=""></span> +7(812)648-82-40
+			</a>
+			<div elem="schedule">
+				с 10:00 до 20:00  
+			</div>	
+		</div>
+		<div elem="topline-item" mod="logo">
+			{{> logo}}
+		</div>
+		<div elem="topline-item" mod="login">
+			<div elem="buttons">
+				<div mod="reg" elem="button">
+					<div elem="button-icon">
+						<img src="images/img/customer.png" alt="">
+					</div>
+					<div elem="button-text">
+						<a href="#" class="log">Вход</a>/<a href="#" class="reg">Регистрация</a>
+					</div>	
+					<div elem="button-dropdown">
+						<div elem="button-dropdown-links">
+							<a href="#">
+								Настройка
+							</a>
+							<a href="#">
+								Заказы
+							</a>
+							<a href="#">
+								Выход
+							</a>
+						</div>
+					</div>
+				</div>	
+				<a href="#" mod="cart" elem="button">
+					<span elem="button-icon">
+						<img src="images/img/cart.png" alt="">
+					</span>
+					<span elem="button-text">
+						Корзина
+					</span>	
+				</a>	
+			</div>
+		</div>
+    </div>
+    <div elem="bottomline">
+		<nav elem="menu">
+			<ul>
+				<li>
+					<a href="#">Печать фото</a>
+					<div elem="menu-dropdown">
+						<div elem="menu-dropdown-img">
+							<img src="images/files/106.jpg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Классикеские</a></li>
+							<li><a href="#">Квадратные</a></li>
+							<li><a href="#">Ретро</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#">Цены</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Оплата</a></li>
+				<li><a href="#">о нас</a></li>
+			</ul>
+		</nav>
+    </div>
+</header><!-- /app-header -->

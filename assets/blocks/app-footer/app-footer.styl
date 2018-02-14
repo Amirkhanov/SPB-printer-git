@@ -4,6 +4,140 @@
 	box-sizing border-box
 	
 	&__topline
-		max-width 728px
+		max-width 768px
+		padding 0 20px
+		box-sizing border-box
 		width 100%
-		margin 0 auto
+		margin 0 auto 25px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		
+	&__menu
+		flex 1 1 auto
+		
+		& > ul
+			columns 4
+			
+			& > li
+				
+				& > a
+					line-height 24px
+					letter-spacing 0.32px
+					text-transform uppercase
+			
+		ul
+			padding 0
+			margin 0
+			list-style-type none
+			
+			li
+				a
+					color #ffffff
+					font-weight 300
+					text-decoration none
+					font-size 16px
+		
+	&__contacts
+		width 138px
+		color #ffffff
+		font-size 16px
+		line-height 24px
+		letter-spacing 0.32px
+		
+	&__contacts-title
+		text-transform uppercase
+		
+	&__contacts-text
+		font-weight 300
+		
+	&__middleline
+		max-width 1130px
+		padding 0 20px
+		box-sizing border-box
+		width 100%
+		margin 0 auto 40px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content space-between
+		
+	&__payment-methods
+		font-size 0
+		line-height 0
+		
+		img
+			margin-right 28px
+			
+			&:last-child
+				margin-right 0
+				
+	&__socials
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		margin-left -12px
+		
+	&__socials-item
+		display block
+		flex 0 0 42px
+		width 42px
+		height 42px
+		border-radius: 50%
+		font-size 0
+		line-height 0
+		margin-left 12px
+		img
+			border-radius: 50px
+			
+	&__agreement
+		a
+			text-decoration none
+			color #ffffff
+			font-size 16px
+			line-height 24px
+			letter-spacing 0.32px
+			
+	&__bottomline
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		
+	&__copy
+		color #ffffff
+		font-size 16px
+		line-height 24px
+		letter-spacing 0.32px
+
+@media all and (max-width: 760px)
+	.app-footer
+		&__middleline
+			flex-direction column
+			
+		&__agreement
+			order -1
+			margin-bottom 40px
+			
+		&__payment-methods
+			margin-bottom 40px
+			
+@media all and (max-width: 640px)
+	.app-footer
+		
+		&__menu
+			
+			& > ul
+				columns 2
+				
+				& > li
+					margin-bottom 20px

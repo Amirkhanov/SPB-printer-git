@@ -1,0 +1,161 @@
+.app-wrapper--gallery .app-content
+    background #fff url(../img/gallerry-fon.jpg) 50% 0 no-repeat
+    background-size cover
+    padding 74px 0 50px
+    
+.gallery-block
+    max-width 1300px
+    margin 0 auto 95px
+    width 100%
+    box-sizing border-box
+    flex none
+    
+    &__inner
+        display flex
+        align-items flex-start
+        
+    &__left
+        flex 0 1 665px
+        position relative
+        
+        .big-pic
+            width 100%
+            max-width 645px
+            box-shadow: 0 0 0 10px #fff, 0 0 24px rgba(0, 0, 0, 0.19)
+            background-color #fff
+            background-repeat no-repeat
+            background-size cover
+            transition all 0.3s ease
+            
+            &:before
+                content ""
+                display block
+                width 100%
+                padding-top 100%
+            
+        .pic-list
+            position absolute
+            right -29px
+            top 0
+            bottom 0
+            display flex
+            align-items center
+            
+            ul
+                margin 0
+                padding 10px
+                list-style none
+                font-size 0
+                background #fff
+                box-shadow 0 0 24px rgba(0, 0, 0, 0.19)
+                display inline-block
+                
+                li
+                    display block
+                    width 50px
+                    height 50px
+                    margin-bottom 10px
+                    
+                    &:last-child
+                        margin-bottom 0
+                        
+                    a 
+                        transition all 0.3s ease
+                        
+                        img
+                            max-width 100%
+                            vertical-align middle
+                        
+                        &.active
+                            opacity .5
+    
+    &__right
+        flex 0 1 630px
+        color #444444
+        font-size 16px
+        font-weight 700
+        line-height 24px
+        padding-top 25px
+        
+        > div 
+            padding 0 40px
+            text-align center
+    
+    &__title
+        margin 0 0 35px
+        
+    &__title2
+        color #7fd1d2
+        font-family Comfortaa
+        font-size 24px
+        font-weight 700
+        letter-spacing 0.48px
+        margin 0 0 33px
+        
+    &__btn-wr
+        margin-top 35px
+        
+        .green-btn
+            display inline-block
+            border-radius 7px
+            font-size 18px
+            line-height 1
+            font-weight bold
+            text-transform uppercase
+            letter-spacing 1.44px
+            padding 15px 22px
+            
+    @media all and (max-width: 1420px)
+        width auto
+        margin 0 60px 95px
+    @media all and (max-width: 960px)
+        width auto
+        margin 0 20px 40px
+        
+    @media all and (max-width: 860px)
+        &__inner
+            flex-direction column
+        &__left
+            order 1
+            flex 0 0 auto
+            width 100%
+            max-width 400px
+            text-align center
+            margin 40px auto
+            
+        &__right
+            flex 0 0 auto
+            
+            & > div
+                padding 0
+        
+        &__title
+            margin 0 0 20px
+        &__title2
+            margin 0 0 15px
+            
+    @media all and (max-width: 480px)
+        &__left 
+            .pic-list
+                right 0
+                top inherit
+                left 0
+                bottom -29px
+                justify-content: center;
+                
+                ul
+                    li
+                        display inline-block
+                        vertical-align top
+                        margin 0 10px 0 0
+                        
+                        &:last-child
+                            margin-right 0
+                            
+    @media all and (max-width: 420px)
+        &__left 
+            .pic-list
+                ul
+                    li
+                        width 30px
+                        height 30px
